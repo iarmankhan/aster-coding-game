@@ -2,7 +2,7 @@
 
 A browser programming game set on a coastal hex island. Write TypeScript to restore the field station's services, watch your accepted results play out, and unlock the next mission.
 
-**[Play Aster](https://iarmankhan.github.io/aster-coding-game/)**
+Public hosting is being configured. The game also runs locally using the instructions below.
 
 All eleven missions are playable. They cover graph traversal, receipt deduplication, parsing, stock accounting, resource allocation, dependency scheduling, sensor windows, state machines, retry schedules, queues, and versioned reconciliation.
 
@@ -53,7 +53,7 @@ Some scripts and documents retain historical v3/v4 checks. They are not all curr
 
 ## Deploy
 
-GitHub Actions checks and builds the game, then deploys `prototype/dist` to GitHub Pages on pushes to `main`. The workflow passes the repository subpath to Vite so fonts, workers, WebAssembly, and editor assets load beneath `/aster-coding-game/`.
+GitHub Actions checks and builds the game on pushes to `main` and pull requests. The root `vercel.json` configures a Vercel deployment from this repository, installing and building the application in `prototype` and serving `prototype/dist`. No environment variables are required. Import the repository into a free Vercel Hobby project to enable Git-based deployment.
 
 Any static host can serve the build. For a root-domain deployment, run the normal build. For a subpath, use `npm run build -- --base=/your-path/`. No paid hosting service is required.
 
