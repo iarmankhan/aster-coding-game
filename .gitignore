@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.vite/
+.cache/
+.DS_Store
+*.log
+.env
+.env.*
+!.env.example
+.wrangler/
+.vercel/
+test-results/
+playwright-report/
+prototype/research/evidence/

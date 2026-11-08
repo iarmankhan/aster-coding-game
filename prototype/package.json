@@ -1,0 +1,48 @@
+{
+  "name": "aster-first-light-prototype",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "check": "tsc --noEmit && tsx scripts/check-mission.ts && tsx scripts/check-runner.ts && tsx scripts/check-runtime-security.ts && tsx scripts/check-runner-protocol.ts && tsx scripts/check-mission-runtime.ts && tsx scripts/check-curriculum.ts && tsx scripts/check-story.ts && tsx scripts/check-campaign.ts && tsx scripts/check-delivery-mission.ts && tsx scripts/check-brief-helpers.ts && tsx scripts/check-console-logging.ts && tsx scripts/check-challenge.ts && tsx scripts/check-results-resize.ts && tsx scripts/check-world-regions.ts && tsx scripts/check-program-playback.ts && tsx scripts/check-program-missions.ts && tsx scripts/check-program-security.ts && tsx scripts/check-program-oracles.ts",
+    "check:browser": "node scripts/check-campaign-browser.mjs",
+    "check:browser:v3": "tsx scripts/check-browser.ts",
+    "check:startup": "node scripts/compare-startup.mjs",
+    "check:density": "node scripts/check-density.mjs",
+    "check:brief-ui": "node scripts/check-brief-ui.mjs",
+    "check:puzzle-ui": "node scripts/check-puzzle-browser.mjs",
+    "check:playback-gate": "node scripts/check-playback-gate.mjs",
+    "check:workbench-ui": "node scripts/check-workbench-ui.mjs",
+    "check:mission-map-ui": "node scripts/check-mission-map-ui.mjs",
+    "check:all-missions": "node scripts/check-all-missions-browser.mjs",
+    "check:program-gates": "node scripts/check-program-gates.mjs",
+    "check:program-webgl-gate": "NO_WEBGL=1 node scripts/check-program-gates.mjs",
+    "check:migration": "node scripts/check-campaign-migration.mjs",
+    "check:program-oracles": "tsx scripts/check-program-oracles.ts",
+    "check:cold-start": "tsx scripts/check-cold-start.ts",
+    "check:curriculum": "tsx scripts/check-curriculum.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@jitl/quickjs-wasmfile-release-sync": "0.31.0",
+    "monaco-editor": "^0.57.0",
+    "quickjs-emscripten": "0.31.0",
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.0",
+    "@types/three": "^0.180.0",
+    "playwright": "^1.65.0",
+    "tsx": "^4.20.5",
+    "typescript": "^6.0.3",
+    "vite": "^7.1.12"
+  },
+  "overrides": {
+    "monaco-editor": {
+      "dompurify": "3.4.17"
+    }
+  }
+}

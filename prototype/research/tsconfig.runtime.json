@@ -1,0 +1,13 @@
+{
+  "extends": "../tsconfig.json",
+  "include": [
+    "../src/editor.ts",
+    "../src/editor-typescript.worker.ts",
+    "../src/runner.ts",
+    "../src/runner.worker.ts",
+    "../scripts/check-runner.ts",
+    "../scripts/check-runtime-security.ts",
+    "../scripts/check-runner-protocol.ts",
+    "runtime-browser-fixture.ts"
+  ]
+}
